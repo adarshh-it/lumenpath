@@ -1,0 +1,35 @@
+/* Custom Scrollbar for a Tech Look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+}
+
+/* Background Animation */
+body {
+    background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Radar Chart Glow Effect */
+#radarChart {
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.1));
+}
+
+/* Hover Transitions */
+.group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(34, 211, 238, 0.3);
+}
