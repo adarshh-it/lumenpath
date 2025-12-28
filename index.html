@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumenPath | AI Career GPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen">
+
+    <div class="max-w-6xl mx-auto px-6 py-10">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 border-b border-slate-800 pb-8">
+            <div>
+                <h1 class="text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent italic">LUMENPATH</h1>
+                <p class="text-slate-400 font-medium">AI-Powered Career Intelligence Engine</p>
+            </div>
+            <div class="flex gap-4">
+                <select id="roleSelect" class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-cyan-500 outline-none">
+                    <option value="data-scientist">Data Scientist</option>
+                    <option value="frontend-developer">Frontend Engineer</option>
+                </select>
+                <button onclick="runDiagnostic()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-900 px-6 py-2 rounded-lg font-bold transition-all transform hover:scale-105">
+                    Run Diagnostic
+                </button>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-slate-800/40 border border-slate-700 p-6 rounded-3xl backdrop-blur-md">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i data-lucide="activity" class="text-cyan-400"></i> Skill Gap Analysis
+                    </h2>
+                    <div class="h-[350px] flex justify-center">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+
+                <div id="gapContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-slate-800/40 border border-slate-700 p-6 rounded-3xl h-full">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="text-blue-400"></i> Training Roadmap
+                    </h2>
+                    <div id="roadmapContainer" class="space-y-4">
+                        <p class="text-slate-500 text-sm italic">Select a role and run diagnostic to see your path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
